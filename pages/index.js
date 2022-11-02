@@ -3,6 +3,7 @@ import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
 // import useEffect
 import { useEffect } from "react";
+import Welcome from '../components/Welcome';
 
 const Index = ({ pets }) => {
 
@@ -10,6 +11,7 @@ const Index = ({ pets }) => {
 
   return (
     <>
+      <Welcome />
       {/* Create a card for each pet */}
       {pets.map((pet) => (
         <div key={pet._id}>

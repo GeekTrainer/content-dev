@@ -11,6 +11,12 @@ describe('Navigation', () => {
       // Find a link with an href attribute containing "about" and click it
       cy.get('h1').contains('Pets')
     })
+
+    // check if page has a textbox with id of name
+    it('should have a textbox with id of name', () => {
+        cy.visit('http://localhost:3000/')
+        cy.get('#name').should('exist')
+    })
   })
   
   // Prevent TypeScript from reading file as legacy script
